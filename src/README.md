@@ -121,3 +121,6 @@ sudo usermod -aG docker $USER
 - `docker rm XXXXX` exclui _container_ especificado (ID)
     - `docker rm XXXXX --force` interrompe e remove simultaneamente
 - `docker port XXXXX` lista portas mapeadas (_container_ x host) do _container_ especificado (ID)
+- `docker images` ou `docker image ls` lista imagens
+- `docker inspect XXXXX` inspeciona elemento (_container_, imagem e etc) especificado (ID ou nome)
+- `docker history XXXXX` histórico da imagem especificada (ID)
