@@ -103,6 +103,9 @@ sudo usermod -aG docker $USER
 - `docker run XXXXX` cria e executa a imagem especificada em um _container_
     - `docker run XXXXX sleep 1d` passa parâmetro `sleep` e valor `1d`
     - `docker run -it XXXXX bash` ativa modo interativo e executa o bash
+    - `docker run -d XXXXX` desanexado (detached) do terminal (em segundo plano e sem travamento)
+    - `docker run -d -P XXXXX` mapeamento automático de portas _container_ x host
+    - `docker run -d -p 8080:80 XXXXX` mapeamento manual de portas _container_ x host (host:_container_)
 > Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o _container_ /    
 - `docker pull XXXXX` baixa a imagem especificada
 - `docker ps` ou `docker container ls` lista _containers_ em execução
@@ -116,3 +119,5 @@ sudo usermod -aG docker $USER
 - `docker pause XXXXX` pausa a execução do _container_ especificado (ID)
 - `docker unpause XXXXX` despausa a execução do _container_ especificado (ID)
 - `docker rm XXXXX` exclui _container_ especificado (ID)
+    - `docker rm XXXXX --force` interrompe e remove simultaneamente
+- `docker port XXXXX` lista portas mapeadas (_container_ x host) do _container_ especificado (ID)
