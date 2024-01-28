@@ -124,3 +124,4 @@ sudo usermod -aG docker $USER
 - `docker images` ou `docker image ls` lista imagens
 - `docker inspect XXXXX` inspeciona elemento (_container_, imagem e etc) especificado (ID ou nome)
 - `docker history XXXXX` histórico da imagem especificada (ID)
+- `docker build -t <nome-usuario-docker-hub>/nome-aplicacao:versao .` cria imagem
