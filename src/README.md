@@ -92,3 +92,13 @@ sudo usermod -aG docker $USER
 ```
 
 > [Pós instalação no Linux](https://docs.docker.com/engine/install/linux-postinstall/)
+
+## Links
+
+- [Docker Hub](https://hub.docker.com/)
+
+## Comandos
+
+- `docker XXXXX --help` ajuda para o comando especificado
+- `docker run XXXXX` executa a imagem especificada
+- `docker pull XXXXX` baixa a imagem especificada
