@@ -134,3 +134,7 @@ sudo usermod -aG docker $USER
 - `docker login -u <nome-usuario-docker-hub>` loga no Docker Hub
 - `docker push <nome-usuario-docker-hub>/nome-aplicacao:versao` publica imagem no Docker Hub
 - `docker tag <nome-usuario-docker-hub-1>/nome-aplicacao-1:versao.1 <nome-usuario-docker-hub-2>/nome-aplicacao-2:versao.2` gera cópia da imagem 1 para imagem 2
+- `docker volume ls` lista volumes
+    - `docker volume create XXXXX` cria volume (armazenado no host em: /var/lib/docker/volumes)
+    - `docker volume prune` remove os volumes que não estão sendo usados
+    - `docker volume rm` remover qualquer volume, sendo usado ou não
