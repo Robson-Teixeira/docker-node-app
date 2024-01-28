@@ -100,9 +100,19 @@ sudo usermod -aG docker $USER
 ## Comandos
 
 - `docker XXXXX --help` ajuda para o comando especificado
-- `docker run XXXXX` executa a imagem especificada em um _container_
-> Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o container.
-- `docker run XXXXX sleep 1d` executa a imagem especificada em um _container_ com parâmetro `sleep` e valor `1d`
+- `docker run XXXXX` cria e executa a imagem especificada em um _container_
+    - `docker run XXXXX sleep 1d` passa parâmetro `sleep` e valor `1d`
+    - `docker run -it XXXXX bash` ativa modo interativo e executa o bash
+> Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o _container_ /    
 - `docker pull XXXXX` baixa a imagem especificada
 - `docker ps` ou `docker container ls` lista _containers_ em execução
-- `docker ps -a` ou `docker container ls -a` lista _containers_ em/fora execução
+    - `docker ps -a` ou `docker container ls -a` fora de execução (`-a`)
+- `docker stop XXXXX` interrompe a execução do _container_ especificado (ID ou nome)
+    - `docker stop -t=0 XXXXX` elimina o tempo de espera (`-t=0`) para interrupção do _container_ (padrão 10 segundos)
+- `docker start XXXXX` inicia a execução do _container_ especificado (ID)
+- `docker exec` executa comando em um _container_ em execução
+    - `docker exec -it XXXXX` forma interativa (`-i` interatividade e `t` terminal padrão do _container_)
+    - `docker exec -it XXXXX bash` comando `bash`
+- `docker pause XXXXX` pausa a execução do _container_ especificado (ID)
+- `docker unpause XXXXX` despausa a execução do _container_ especificado (ID)
+- `docker rm XXXXX` exclui _container_ especificado (ID)
