@@ -100,5 +100,9 @@ sudo usermod -aG docker $USER
 ## Comandos
 
 - `docker XXXXX --help` ajuda para o comando especificado
-- `docker run XXXXX` executa a imagem especificada
+- `docker run XXXXX` executa a imagem especificada em um _container_
+> Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o container.
+- `docker run XXXXX sleep 1d` executa a imagem especificada em um _container_ com parâmetro `sleep` e valor `1d`
 - `docker pull XXXXX` baixa a imagem especificada
+- `docker ps` ou `docker container ls` lista _containers_ em execução
+- `docker ps -a` ou `docker container ls -a` lista _containers_ em/fora execução
