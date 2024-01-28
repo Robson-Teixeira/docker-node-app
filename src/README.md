@@ -112,6 +112,7 @@ sudo usermod -aG docker $USER
     - `docker ps -a` ou `docker container ls -a` fora de execução (`-a`)
 - `docker stop XXXXX` interrompe a execução do _container_ especificado (ID ou nome)
     - `docker stop -t=0 XXXXX` elimina o tempo de espera (`-t=0`) para interrupção do _container_ (padrão 10 segundos)
+    - `docker stop $(docker container ls -q)` modo silencioso (`-q` quiet) recupera apenas os ID's
 - `docker start XXXXX` inicia a execução do _container_ especificado (ID)
 - `docker exec` executa comando em um _container_ em execução
     - `docker exec -it XXXXX` forma interativa (`-i` interatividade e `t` terminal padrão do _container_)
