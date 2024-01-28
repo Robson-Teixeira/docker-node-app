@@ -110,6 +110,8 @@ sudo usermod -aG docker $USER
 - `docker pull XXXXX` baixa a imagem especificada
 - `docker ps` ou `docker container ls` lista _containers_ em execução
     - `docker ps -a` ou `docker container ls -a` fora de execução (`-a`)
+    - `docker ps -s` inclui informação do tamanho (`-s` size)
+    - `docker ps -sa` todos _containers_ incluindo fora de execução
 - `docker stop XXXXX` interrompe a execução do _container_ especificado (ID ou nome)
     - `docker stop -t=0 XXXXX` elimina o tempo de espera (`-t=0`) para interrupção do _container_ (padrão 10 segundos)
     - `docker stop $(docker container ls -q)` modo silencioso (`-q` quiet) recupera apenas os ID's
@@ -121,6 +123,8 @@ sudo usermod -aG docker $USER
 - `docker unpause XXXXX` despausa a execução do _container_ especificado (ID)
 - `docker rm XXXXX` exclui _container_ especificado (ID)
     - `docker rm XXXXX --force` interrompe e remove simultaneamente
+    - `docker container rm $(docker container ls -aq)` modo silencioso para todos containers incluindo fora de execução
+    - `docker rmi $(docker image ls -aq) --force` exclui imagens de modo forçado (`--force`)
 - `docker port XXXXX` lista portas mapeadas (_container_ x host) do _container_ especificado (ID)
 - `docker images` ou `docker image ls` lista imagens
 - `docker inspect XXXXX` inspeciona elemento (_container_, imagem e etc) especificado (ID ou nome)
