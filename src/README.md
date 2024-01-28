@@ -126,3 +126,6 @@ sudo usermod -aG docker $USER
 - `docker inspect XXXXX` inspeciona elemento (_container_, imagem e etc) especificado (ID ou nome)
 - `docker history XXXXX` histórico da imagem especificada (ID)
 - `docker build -t <nome-usuario-docker-hub>/nome-aplicacao:versao .` cria imagem
+- `docker login -u <nome-usuario-docker-hub>` loga no Docker Hub
+- `docker push <nome-usuario-docker-hub>/nome-aplicacao:versao` publica imagem no Docker Hub
+- `docker tag <nome-usuario-docker-hub-1>/nome-aplicacao-1:versao.1 <nome-usuario-docker-hub-2>/nome-aplicacao-2:versao.2` gera cópia da imagem 1 para imagem 2
