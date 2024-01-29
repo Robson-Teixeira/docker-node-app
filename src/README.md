@@ -139,3 +139,4 @@ sudo usermod -aG docker $USER
     - `docker volume create XXXXX` cria volume (armazenado no host em: /var/lib/docker/volumes)
     - `docker volume prune` remove os volumes que não estão sendo usados
     - `docker volume rm` remover qualquer volume, sendo usado ou não
+- `docker network ls` lista redes
