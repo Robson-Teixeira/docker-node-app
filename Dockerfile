@@ -6,6 +6,7 @@ WORKDIR /app-node
 ARG PORT_BUILD=6000
 # Argumento/variável de ambiente para uso em tempo de execução do container
 ENV PORT=$PORT_BUILD
+ENV NODE_ENV=development
 # Expõe porta utilizada pela aplicação
 EXPOSE $PORT_BUILD
 # Copia artefatos do diretório atual da aplicação para o workdir
