@@ -108,7 +108,7 @@ sudo usermod -aG docker $USER
     - `docker run -d -p 8080:80 XXXXX` mapeamento manual de portas _container_ x host (host:_container_)
     - `docker run -it -v <diretorio-host>ou<nome-volume>:<diretorio container> XXXXX` ou `docker run -it --mount type=bind,source=<diretorio-host>ou<nome-volume>,target=<diretorio container> XXXXX bash` diretório do host corresponde a caminho no _container_ (`-v` volume)
     - `docker run -it --tmpfs=<diretorio container> XXXXX bash` ou `docker run -it --mount type=tmpfs,destination=<diretorio container> XXXXX bash` diretório temporário em memória e não no R/W (read/write). Utilizado para dados sensíveis. Só disponível para host Linux
-    - `docker run -it --name <nome-container> --network <nome-bridge> XXXXX bash` nomeia _container_ e define _bridge_
+    - `docker run -it --name <nome-container> --network <nome-bridge> XXXXX bash` nomeia _container_ e define _bridge_. `--network` pode receber `bridge` (padrão ou definida pelo usuário), `none` (_container_ isolado/sem acesso) e `host` (mesma rede do host)
 > Procura a imagem localmente -> Baixa a imagem caso não encontre localmente -> Valida o hash da imagem -> Executa o _container_ /    
 - `docker pull XXXXX` baixa a imagem especificada
 - `docker ps` ou `docker container ls` lista _containers_ em execução
