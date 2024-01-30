@@ -143,3 +143,4 @@ sudo usermod -aG docker $USER
     - `docker volume rm` remover qualquer volume, sendo usado ou não
 - `docker network ls` lista redes
     - `docker network create --driver bridge <nome-bridge>` cria rede _bridge_
+- `docker-compose up` constrói, (re)cria, inicia e anexa _containers_ para um serviço
