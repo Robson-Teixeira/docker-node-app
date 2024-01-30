@@ -4,6 +4,7 @@
 
 - [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/)
 - [WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 > [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/)
 
